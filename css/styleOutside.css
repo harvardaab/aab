@@ -1,0 +1,531 @@
+/* ////////          A Kevin Kong Production          \\\\\\\\
+   ////////       Philadelphia, Brother King '13      \\\\\\\\
+   ////////                Summer 2012                \\\\\\\\ */
+
+
+
+/*------------------ MISCELLANEOUS ---------------------*/
+/* 
+	Resets defualt browser settings
+	reset.css
+*/
+/*html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline; }*/
+:focus { outline:0; }
+a:active { outline:none; }
+body { line-height:1; color:black; background:white; }
+ol, ul, li { list-style:none; }
+table { border-collapse:separate; border-spacing:0; }
+caption,th,td { text-align:left; font-weight:normal; }
+blockquote:before,blockquote:after,q:before,q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+
+
+html, body, div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+body {
+	background:transparent;
+	font:normal 62.5%/1.5 Source Sans Pro, Arial, sans-serif;
+	letter-spacing:0;
+	color:#333;
+	background:#efefef url(../media/slide/background.png) repeat top center;
+	padding: 20;
+	position:relative;
+	text-shadow:0 1px 0 rgba(255,255,255,.8);
+	-webkit-font-smoothing: subpixel-antialiased;
+	}
+/*
+body:before 
+	{
+	  content: "";
+	  position: fixed;
+	  top: -10px;
+	  left: 0;
+	  width: 100%;
+	  height: 10px;
+	  z-index: 100;
+	  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	  box-shadow: 0px 0px 10px rgba(0,0,0,.8);			  
+	}
+*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+	font-weight: bold;
+	color:#333333;
+	}
+label, dt, td {
+	font-family: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+	font-weight: 200;
+	color:#333333;
+	}
+p, span{
+	font-family: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+	font-weight:300;
+	}
+p{font-size: 14;}
+
+label {text-decoration:none;
+	color:#222;
+	}
+
+a:link, a:visited, a:active {
+	text-decoration:none;
+	color:#243E6E;
+	font-weight: bold;
+	}
+
+a:hover {
+	text-decoration:underline;
+	}
+/**/
+div.body-content > ul li a:hover, div.body-content h1 a:hover, div.brofile-nav a:hover, div#sidebar a:hover,
+div.body-content td li a:hover, div#tabs ul li a:hover, div#tabs > table tr td a:hover {text-decoration:none;}
+
+div.body-content td li a, div.brofile-nav li a {
+	font-weight: 300;
+	}
+
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.bold {font-weight:bold;}
+.hidden {display:none;}
+.left {float:left}
+.right {float:right}
+hr {
+	border:none;
+	height:1px;
+	background-color: #888;
+	}
+
+.wrap {
+	margin:0px auto 20px auto;
+    width: 800px;
+	}
+
+.in-wrap {
+	margin:0;
+    width: 100%;
+	}
+
+.caption {
+	font-family:Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	font-weight:bold;
+	}
+
+img.thumb {
+	vertical-align:middle;
+	border-radius: 2px;
+	box-shadow: 		0 0 4px 1px #ccc;
+	-moz-box-shadow:	0 0 4px 1px #ccc;
+	-o-box-shadow:		0 0 4px 1px #ccc;
+	-ms-box-shadow:		0 0 4px 1px #ccc;
+	-webkit-box-shadow:	0 0 4px 1px #ccc;
+	}
+img.small {height: 30px; width: 30px;}
+img.medium {width:40px;height:40px}
+img.big {height: 50px;width: 50px;}
+
+input:focus {outline:none}
+
+/*================== OUTSIDE PAGINATING WITH TABS =================*/
+.ui-tabs-nav {margin-bottom:30px}
+.ui-tabs .ui-tabs-nav li {list-style: none; position: relative; display:inline; margin-right:40px; margin-bottom:40px;}
+.ui-tabs .ui-tabs-nav li > a { padding: 0px; text-decoration: none;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: default;
+	color:#333333;
+		transition: .2s ease-in-out;
+		-webkit-transition: .2s ease-in-out;
+		-moz-transition: .2s ease-in-out;
+		-o-transition: .2s ease-in-out;
+	}
+.ui-tabs .ui-tabs-nav li a:hover { color:#888; -webkit-transition: .2s ease-in-out; -moz-transition: .2s ease-in-out; -o-transition: .2s ease-in-out;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a:hover {color:#333;}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+		color:#ccc;
+		background:transparent;
+		font-family: Source Sans Pro;
+		font-weight: 300;
+		font-size:24px;
+		cursor: pointer;
+	}
+.ui-tooltip {
+	font-family: Source Sans Pro;
+	background: #333;
+	color: white;
+	margin-top:-20;
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+.body-content h1 {
+	font-family: Source Sans Pro;
+	font-size: 24px;
+	text-shadow: 1px 1px white;
+	margin:0px;
+	}
+
+/*============= MAIN BODY CONTENT LAYOUT ==============*/
+.body-content{
+	overflow:hidden;
+	min-height:315px;
+	}
+
+.body-content:hover{overflow:auto;}
+
+.overflow { overflow:hidden; }
+.overflow:hover { overflow:auto; }
+
+
+/*============= BROTHERS PAGE ==============*/
+table.broster dt {
+	font-size: 13px;
+	font-weight: 900;
+	}
+table.broster li a, table.broster li a, table.broster li b{
+	font-family:'Source Sans Pro', sans-serif;
+	color:#aaa;
+	font-size: 15px;
+	font-weight: 200;
+	}
+	
+table.broster li a:hover{
+	color:#333;
+	text-decoration: none;
+	}
+
+/*============= ABOUT PAGES ==============*/
+body#about a#about-link,
+body.constitution a#constitution,
+body.leadership a#leadership,
+body.recruit a#recruit
+{
+	color: #333;
+	font-weight:300;
+}
+div#about > h2 {font-size: 18px; font-weight: bold;}
+div#about > p {font-weight: 100;}
+
+body.about div p {font-size: 15px; font-weight: 400;}
+
+.lift-shadow {
+  position: relative;
+  width: 95%;
+  background: white;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  padding: 1.5em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  margin: 4px auto;
+  box-shadow:		0 0 7px 0px #ccc;
+  -moz-box-shadow:	0 0 7px 0px #ccc;
+  -o-box-shadow:	0 0 7px 0px #ccc;
+	}
+/*
+.lift-shadow:before, .lift-shadow:after
+{
+  z-index: -1;
+  position: absolute; 
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%; 
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7); 
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);    
+  -moz-transform: rotate(-3deg);   
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.lift-shadow:after 
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+*/
+
+span#board {
+	font-size: 18px;
+	font-weight: bold;
+	}
+
+div.each-director {
+	font-family:Source Sans Pro;
+	font-size: 14px;
+	padding: 2px 0px;
+	}
+	
+div.each-director img {margin-right:20px;}
+
+/*============= BRO/ALUM ROSTER (BROFILE/ALUMNUS VIEW) ==============*/
+
+.brofile-nav{
+	width:140px;
+	max-height:700px;
+	}
+.brofile-nav #brofile-list {overflow:hidden;}
+.brofile-nav #brofile-list:hover{overflow:auto}
+
+.brofile-nav a, .brofile-nav li {color:#777; font-family:Source Sans Pro; font-weight:300; font-size: 14px}
+.brofile-nav a#bro_link { font-size: 24px}
+.brofile-nav a:hover {color:#333}
+.brofile-nav h1 {margin:0px; padding:20px 0; font-size: 24px}
+.brofile-nav li {padding-left:5px;}
+.brofile-nav li:hover {background: #f9f9f9;}
+.brofile-nav li.selected {font-weight: bold; color: #222; cursor: default; }
+.brofile-nav li.selected:hover {background:transparent;}
+.brofile-nav dt {font-size: 12px; font-weight: 900; color:#555}
+.brofile{
+	min-width:547;
+	width: 630px;
+	}
+.profpic {width:250px;}
+span#name, span#classyear {
+	font-family: Source Sans Pro;
+	font-weight: 200;
+	font-size: 30px;
+	}
+.brofile span#classyear {
+	color:#ddd;
+	}
+#brofile-box{
+	margin-top:0px;
+	}
+#brofile-box p, #brofile-box label{
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	}
+#brofile-box p#info { font-size: 14px; }
+
+
+
+
+/*============= GALLERY ==============*/
+
+
+div.each-album {
+	margin-bottom: 20px;
+	width: 700px;
+	}
+span.album-title{font-size: 16px;}
+span.album-date{font-size: 12px;}
+
+
+/*============= MEDIA ==============*/
+span.prettybig {
+	font-size: 24px;
+	color:#ccc;
+	}
+	
+.each-medium {
+	margin-bottom: 40px;
+	opacity: 0.5;
+		transition: .2s ease-in-out;
+		-webkit-transition: .2s ease-in-out;
+		-moz-transition: .2s ease-in-out;
+		-o-transition: .2s ease-in-out;
+	}
+.each-medium:hover {
+	opacity: 1;
+	}
+.content-item:first-child {padding-top:20px}
+
+
+
+/*============ CONTACT =============*/
+
+input, textarea {
+	border:none;
+	font-family: Source Sans Pro;
+	font-weight: 300;
+	}
+
+input#input {
+	border:solid 1px #ccc;
+	width: 300px;
+	padding: 10px;
+	margin:10px 0px;
+	font-size: 14px;
+	}
+
+textarea#textarea {
+	border:solid 1px #ccc;
+	margin: 10px 0px;
+	width: 600px;
+	height: 300px;
+	padding: 10px;
+	font-size: 14px;
+	}
+
+input#button {
+	border:none;
+	padding: 20px 70px;
+	margin:10px 0px;
+	font-size: 13px;
+	letter-spacing: 0px;
+	color: #fff;
+	background: #243E6E;
+	}
+input#button:hover {
+	background: #32528C;
+	}
+input#button:active {
+	background: #11274F;
+	}
+
+span#error {
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #990B19;
+	}
+span#success {
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ABBD6C;
+	}
+
+.highlighted {
+	-moz-box-shadow:		0 0 5px 0px #963640;
+	-webkit-box-shadow:		0 0 5px 0px #963640;
+	-o-box-shadow:			0 0 5px 0px #963640;
+	box-shadow:				0 0 5px 0px #963640;
+	}
+.success {
+	-moz-box-shadow:		0 0 5px 0px #ABBD6C;
+	-webkit-box-shadow:		0 0 5px 0px #ABBD6C;
+	-o-box-shadow:			0 0 5px 0px #ABBD6C;
+	box-shadow:				0 0 5px 0px #ABBD6C;
+	}
+
+
+/*------------------ LOGIN ---------------------*/
+
+div.login-box 
+{
+  position: relative;
+  width: 300px;
+  margin: 50px auto;
+  height: 250px;
+  background: white;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  padding: 2em 1.5em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  text-align:center;
+  box-shadow:		0 0 7px 0px #ccc;
+  -moz-box-shadow:	0 0 7px 0px #ccc;
+  -o-box-shadow:	0 0 7px 0px #ccc;
+}
+/*
+div.login-box:before, div.login-box:after
+{
+  z-index: -1;
+  position: absolute; 
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%; 
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7); 
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);    
+  -moz-transform: rotate(-3deg);   
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+div.login-box:after 
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+*/
+.loginform, .loginselect{
+	margin: 5px 29px;
+	padding: 7px;
+	height: 35px;
+	width: 80%;
+	background: transparent;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+	font-family: Helvetica Neue, Arial, sans-serif;
+	font-size: 13px;
+	z-index:0;
+	float:left;
+}
+
+
+.loginselect {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 0px 7px;
+	}
+
+#loginbutton {
+	float:right;
+	border: none;
+	margin: -32px 35px 0px 0px;
+	z-index: 200;
+	width: 20px;
+	background: url('../pix/arrow.svg') no-repeat;
+	background-size: 18px 18px;
+	cursor:pointer;
+	}
+font#error, font#success{
+	font-family: Tahoma, Helvetica Neue, Arial, sans-serif;
+	font-size: 13px;
+	}
+font#error { color: #8F0707; }
+font#success{ color: #89A303; }
+
+div#pwhint {
+	background: black;
+	opacity: 0.80;
+	padding: 15px;
+	width:300px;
+	border: solid 1px white;
+	box-shadow: 0 0 10px 0px #333;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-weight: 200;
+	text-align: center;
+	text-shadow: none;
+	margin: 0px auto;
+	font-size: 12px;
+	}

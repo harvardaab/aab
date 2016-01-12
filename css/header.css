@@ -1,0 +1,66 @@
+/* ////////          A Kevin Kong Production          \\\\\\\\
+   ////////       Philadelphia, Brother King '13      \\\\\\\\
+   ////////                Summer 2012                \\\\\\\\ */
+
+@charset "utf-8";
+/* CSS Document */
+
+
+/*------------------ HEADER NAV ---------------------*/
+div#head-nav {
+	width: 100%;
+	height: 60px;
+	padding:0px;
+	margin:0px;
+	}
+img.logo {
+	height:50px;
+	width:63px;
+	margin: 0;
+	position: relative;
+	vertical-align: middle;
+	padding: 0;
+	}
+
+div#head-nav ul {
+	margin-top: 15px;
+	}
+
+div#head-nav a{
+	font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	font-size: 15px;
+	text-transform:uppercase;
+	letter-spacing:0px;
+	}
+	
+div#head-nav li {
+	display:inline;
+	padding-left:30px;
+	}
+	
+div#head-nav li a{
+	font-weight: 300;
+	color:#999;
+	-webkit-transition: .2s ease-in-out;
+  	-moz-transition: .2s ease-in-out;
+  	-o-transition: .2s ease-in-out;
+	}
+	
+div#head-nav li a:hover{color:#333; text-decoration:none;}
+
+body#about a#about,
+body#brothers a#brothers,
+body#media a#media,
+body#gallery a#gallery,
+body#news a#news,
+body#contact a#contact,
+body#alumni a#alumni
+{
+	color: #333;
+	font-weight: 900;
+}
+
+.brothers {
+	border-bottom:solid 1px #ccc;
+	margin-left:10px;
+	}
